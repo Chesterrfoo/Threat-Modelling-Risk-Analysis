@@ -2,7 +2,7 @@
 
 This repository contains three security demonstrations developed for a cybersecurity project focusing on the risk analysis and protection of an IoT/Smart Device company. The goal of this repository is to showcase practical implementations of critical security controls that address real threats identified through threat modelling and detailed risk assessment.
 
-These demos simulate how an IoT provider like SmartHomeX can strengthen its security posture against credential theft, API abuse, firmware tampering, and device-level threats.
+These demos simulate how an IoT provider like Prime Technologies can strengthen its security posture against credential theft, API abuse, firmware tampering, and device-level threats.
 
 ---
 
