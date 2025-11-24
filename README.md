@@ -46,8 +46,7 @@ To prevent unauthorized access even if an attacker steals user credentials.
 - `qrcode` for Google Authenticator QR setup  
 
 ### 📂 Files  
-- `mfa_qr_demo.py` – MFA demo with QR code integration  
-- `mfa_demo.py` – Basic MFA login simulation  
+- `mfa_demo.py` – QR code MFA login simulation  
 
 ---
 
