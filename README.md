@@ -112,7 +112,26 @@ To prevent malicious or tampered firmware from being installed on IoT devices �
 ---
 
 # 📁 Repository Structure
-<img width="270" height="633" alt="image" src="https://github.com/user-attachments/assets/35bf6b71-8fc6-402b-ad37-baa28e290fac" />
+**Prime Project Source Codes/**
+│
+├── api_rate_limit_demo/
+│   ├── api_rate_limit_demo.py
+│   └── attack_script.py
+│
+├── firmware_security_demo/
+│   ├── gen_keys.py
+│   ├── sign_firmware.py
+│   ├── firmware_gui_verify.py
+│   ├── firmware_original.bin
+│   ├── firmware_modified.bin
+│   └── firmware_original.bin.sig
+│
+├── keys/
+│   ├── private_key.pem
+│   └── public_key.pem
+│
+└── mfa_demo/
+    └── mfa_demo.py
 
 ---
 
