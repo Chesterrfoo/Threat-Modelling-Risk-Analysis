@@ -6,183 +6,118 @@
   <img src="https://img.shields.io/badge/IoT%20Security%20%7C%20MFA%20%7C%20API%20Rate%20Limiting%20%7C%20Firmware%20Integrity-1ABC9C?style=flat-square" />
 </p>
 
-Prime Technologies Sdn. Bhd. – Security Controls Demonstration
+# Prime Technologies Sdn. Bhd. – Security Controls Demonstration
 
-This repository contains three security demonstrations developed for a cybersecurity project focusing on the risks and defenses of an IoT/Smart Device company. The purpose of these demos is to show practical implementations of security controls that mitigate real threats identified through threat modelling and detailed risk assessment.
+This repository contains three security demonstrations developed for a cybersecurity project focusing on protecting an IoT/Smart Device ecosystem. 
+The purpose of this repository is to showcase practical implementations of security controls that mitigate real threats discovered through threat modelling and detailed risk assessment.
 
-Prime Technologies Sdn. Bhd. (fictional) develops cloud-connected IoT devices such as smart locks, sensors, and lighting systems. These demos illustrate how the organization can strengthen its cybersecurity posture using modern, industry-standard security practices.
+Prime Technologies Sdn. Bhd. (fictional) builds cloud-connected IoT devices such as smart locks, sensors, and lighting systems. 
+These demonstrations illustrate how the company can strengthen its cybersecurity posture using modern, industry-standard security measures.
 
-📌 Project Overview
+---
+
+## 📌 Project Overview
 
 Through the STRIDE threat modelling framework and detailed risk analysis, the following high-risk issues were identified:
 
-Weak authentication → Credential theft
+- **Weak authentication** → Credential theft  
+- **API exposure** → Denial-of-Service (DoS) attacks  
+- **Insecure firmware update mechanism** → Firmware tampering  
+- **Lack of authenticity checks** → Supply-chain attacks  
 
-API exposure → Denial-of-Service (DoS) attacks
+This repository demonstrates three major security controls developed to address these risks:
 
-Insecure firmware update mechanism → Firmware tampering
+- **Multi-Factor Authentication (MFA)**  
+- **API Rate Limiting (DoS Mitigation)**  
+- **Firmware Integrity & Digital Signature Verification**
 
-Lack of authenticity checks → Supply-chain attacks
+---
 
-This repository demonstrates three security controls designed to address these issues:
+# 🚀 Demonstrations Included
 
-Multi-Factor Authentication (MFA)
+---
 
-API Rate Limiting (DoS Mitigation)
+## 1. Multi-Factor Authentication (MFA) Demo  
+**Folder:** `mfa_demo/`
 
-Firmware Integrity & Digital Signature Verification
+A secure login simulation using:
 
-🚀 Demonstrations Included
-1. Multi-Factor Authentication (MFA) Demo
+- Password authentication  
+- A 6-digit TOTP code (Microsoft / Google Authenticator)  
+- A QR code popup for easy account registration  
 
-Folder: mfa_demo/
-
-This demo simulates a secure login system using:
-
-Password authentication
-
-A 6-digit TOTP code (Microsoft Authenticator / Google Authenticator)
-
-A QR code popup for easy registration
-
-🔐 Purpose
-
+### 🔐 Purpose
 To prevent unauthorized access even if a password is compromised.
 
-🛠 Tools Used
+### 🛠 Tools Used
+- Python  
+- `pyotp`  
+- `qrcode[pil]`  
+- `Pillow`  
+- Microsoft Authenticator  
 
-Python
+### 📂 Files
+- `mfa_demo.py` — Complete QR-based MFA simulation
 
-pyotp
+---
 
-qrcode + Pillow
-
-Microsoft Authenticator
-
-📂 Files
-
-mfa_demo.py — QR-based MFA login simulation
-
-2. API Rate Limiting Demo
-
-Folder: api_rate_limit_demo/
+## 2. API Rate Limiting Demo  
+**Folder:** `api_rate_limit_demo/`
 
 A Flask-based REST API demonstrating:
 
-Normal API operation
+- Normal endpoint access  
+- Automatic blocking after excessive requests  
+- HTTP 429 “Too Many Requests” error  
+- Optional attacker script to simulate DoS traffic  
 
-Automatic blocking after excessive requests
+### ⚡ Purpose
+To protect cloud APIs from denial-of-service attempts and brute-force request floods.
 
-HTTP 429 “Too Many Requests” responses
+### 🛠 Tools Used
+- Python  
+- Flask  
+- Flask-Limiter  
+- (Optional) Postman or Python attacker script  
 
-Optional attack simulation script
+### 📂 Files
+- `api_rate_limit_demo.py`  
+- `attack_script.py` (optional attacker simulation)
 
-⚡ Purpose
+---
 
-To protect cloud APIs from DoS attacks and brute-force traffic.
+## 3. Firmware Integrity & Digital Signature Verification (GUI Version)  
+**Folder:** `firmware_security_demo/`
 
-🛠 Tools Used
+An enhanced IoT firmware security demo featuring:
 
-Python
+### ✔ SHA-256 hashing  
+Detects any change in firmware (integrity).
 
-Flask
+### ✔ RSA-PSS digital signature verification  
+Validates firmware authenticity.
 
-Flask-Limiter
+### ✔ Tkinter GUI  
+User-friendly graphical interface for demonstrating both integrity and signature verification.
 
-(Optional) Postman / attacker script
+### 🔧 Purpose
+To prevent malicious or tampered firmware from being installed on IoT devices — a critical requirement in modern OTA (Over-The-Air) update systems.
 
-📂 Files
+### 🛠 Tools Used
+- Python  
+- `cryptography` (RSA key generation, signing, verification)  
+- `hashlib`  
+- Tkinter  
 
-api_rate_limit_demo.py
+### 📂 Files
+- `gen_keys.py` — Generates RSA private & public keys  
+- `sign_firmware.py` — Signs original firmware to produce `.sig`  
+- `firmware_gui_verify.py` — GUI tool for verifying firmware integrity & signature  
+- `firmware_original.bin`  
+- `firmware_modified.bin`  
+- `firmware_original.bin.sig`  
 
-attack_script.py (optional)
+---
 
-3. Firmware Integrity & Digital Signature Verification (GUI Version)
+# 📁 Repository Structure
 
-Folder: firmware_security_demo/
-
-This advanced demo validates IoT firmware using:
-
-SHA-256 hashing (integrity)
-
-RSA-PSS digital signatures (authenticity)
-
-A Tkinter GUI for a visual demonstration
-
-🔧 Purpose
-
-To prevent malicious or tampered firmware from being installed on IoT devices.
-
-🛠 Tools Used
-
-Python
-
-cryptography library
-
-Tkinter
-
-hashlib
-
-📂 Files
-
-gen_keys.py — generate RSA keys
-
-sign_firmware.py — sign original firmware
-
-firmware_gui_verify.py — GUI verification tool
-
-firmware_original.bin
-
-firmware_modified.bin
-
-firmware_original.bin.sig
-
-📁 Repository Structure
-Project Source Codes/
-│
-├── api_rate_limit_demo/
-│   ├── api_rate_limit_demo.py
-│   └── attack_script.py
-│
-├── firmware_security_demo/
-│   ├── gen_keys.py
-│   ├── sign_firmware.py
-│   ├── firmware_gui_verify.py
-│   ├── firmware_original.bin
-│   ├── firmware_modified.bin
-│   └── firmware_original.bin.sig
-│
-├── keys/
-│   ├── private_key.pem
-│   └── public_key.pem
-│
-└── mfa_demo/
-    └── mfa_demo.py
-
-📦 Installation
-
-Install all required dependencies:
-
-pip install flask flask-limiter pyotp qrcode[pil] cryptography pillow
-
-▶️ Running the Demos
-MFA Demo
-python mfa_demo/mfa_demo.py
-
-API Rate Limiting Demo
-python api_rate_limit_demo/api_rate_limit_demo.py
-
-Firmware Integrity & Signature Demo
-python firmware_security_demo/gen_keys.py
-python firmware_security_demo/sign_firmware.py -i firmware_original.bin
-python firmware_security_demo/firmware_gui_verify.py
-
-🔒 Security Context
-
-These demonstrations provide a layered security approach:
-
-MFA → Secures user authentication
-
-Rate Limiting → Protects cloud availability
-
-Firmware Verification → Ensures device integrity & authenticity
