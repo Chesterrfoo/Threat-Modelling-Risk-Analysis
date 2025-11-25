@@ -113,7 +113,7 @@ To prevent malicious or tampered firmware from being installed on IoT devices �
 
 # 📁 Repository Structure
 ```md
-**Prime Project Source Codes/**
+Prime Project Source Codes/
 │
 ├── api_rate_limit_demo/
 │   ├── api_rate_limit_demo.py
