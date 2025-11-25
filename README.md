@@ -150,19 +150,25 @@ pip install flask flask-limiter pyotp qrcode[pil] cryptography pillow
 # ▶️ Running the Demonstrations
 
 ## Run MFA Demo
+```bash
 python mfa_demo/mfa_demo.py
-
+```
 ## Run API Rate Limiting Demo
+```bash
 python api_rate_limit_demo/api_rate_limit_demo.py
+```
 
 ## Optional attacker
+```bash
 python api_rate_limit_demo/attack_script.py
+```
 
 ## Run Firmware Integrity & Signature Demo
+```bash
 python firmware_security_demo/gen_keys.py
 python firmware_security_demo/sign_firmware.py -i firmware_original.bin
 python firmware_security_demo/firmware_gui_verify.py
-
+```
 ------------------------------------------------------------
 
 # 🔒 Security Context
