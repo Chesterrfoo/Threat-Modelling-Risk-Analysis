@@ -141,6 +141,36 @@ Install all required dependencies:
 
 ```bash
 pip install flask flask-limiter pyotp qrcode[pil] cryptography pillow
-Tkinter comes preinstalled with Python on Windows.
+```
 
+(Tkinter comes preinstalled with Python on Windows.)
 
+------------------------------------------------------------
+
+# ▶️ Running the Demonstrations
+
+## Run MFA Demo
+python mfa_demo/mfa_demo.py
+
+## Run API Rate Limiting Demo
+python api_rate_limit_demo/api_rate_limit_demo.py
+
+## Optional attacker
+python api_rate_limit_demo/attack_script.py
+
+## Run Firmware Integrity & Signature Demo
+python firmware_security_demo/gen_keys.py
+python firmware_security_demo/sign_firmware.py -i firmware_original.bin
+python firmware_security_demo/firmware_gui_verify.py
+
+------------------------------------------------------------
+
+# 🔒 Security Context
+
+These demonstrations form a multi-layered cybersecurity strategy:
+
+MFA → Protects authentication  
+Rate Limiting → Protects cloud availability  
+Digital Signatures → Protect devices against malicious firmware  
+
+Together, these controls strengthen the security posture of any IoT ecosystem.
