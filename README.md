@@ -112,4 +112,35 @@ To prevent malicious or tampered firmware from being installed on IoT devices �
 ---
 
 # 📁 Repository Structure
+Project Source Codes/
+│
+├── api_rate_limit_demo/
+│ ├── api_rate_limit_demo.py
+│ └── attack_script.py
+│
+├── firmware_security_demo/
+│ ├── gen_keys.py
+│ ├── sign_firmware.py
+│ ├── firmware_gui_verify.py
+│ ├── firmware_original.bin
+│ ├── firmware_modified.bin
+│ └── firmware_original.bin.sig
+│
+├── keys/
+│ ├── private_key.pem
+│ └── public_key.pem
+│
+└── mfa_demo/
+└── mfa_demo.py
+
+---
+
+# 📦 Installation
+
+Install all required dependencies:
+
+```bash
+pip install flask flask-limiter pyotp qrcode[pil] cryptography pillow
+Tkinter comes preinstalled with Python on Windows.
+
 
