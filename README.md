@@ -1,11 +1,3 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Prime%20Technologies%20Sdn.%20Bhd.-Security%20Controls%20Demonstration-0A84FF?style=for-the-badge&logo=shieldcheck&logoColor=white" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/IoT%20Security%20%7C%20MFA%20%7C%20API%20Rate%20Limiting%20%7C%20Firmware%20Integrity-1ABC9C?style=flat-square" />
-</p>
-
 # Prime Technologies Sdn. Bhd. – Security Controls Demonstration
 
 This repository contains three security demonstrations developed for a cybersecurity project focusing on protecting an IoT/Smart Device ecosystem. 
